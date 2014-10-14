@@ -38,6 +38,8 @@ function gameInitialize() {
     
     canvas.width = screenWidth;
     canvas.height = screenHeight;
+    
+    document.addEventListener();
 }
 
 function gameLoop() {
@@ -84,12 +86,15 @@ function snakeUpdate() {
     if(snakeDirection == "left") {
         snakeHeadX--;
     }
+    else{
+        snakeHeadX++;
+    }
     
     var snakeTail = snake.pop();
     snakeTail.x = snakeHeadX;
     snakeTail.y = snakeHeadY;
     snake.unshift(snakeTail);
-}
+
 
 /*------------------------------------------------------------------------------
  *Food Functions 
